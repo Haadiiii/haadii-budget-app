@@ -127,24 +127,12 @@ Heroku
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
-
-> 👤 **David Kasilia Mwanzia**
-
-- GitHub: [@David-Kasilia ](https://github.com/githubhandle)
-- Twitter: [@DavidKasilia](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 👥 Author <a name="authors"></a>
 
 > 👤 **Haamid Ali**
 
 - GitHub: [@Haadii ](https://github.com/githubhandle)
 - Twitter: [@Haamid Ali](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-> 👤 **Stephen Ezea**
-
-- GitHub: [@stephnna ](https://github.com/githubhandle)
-- Twitter: [@Stephen Ezea](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -171,9 +159,8 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
