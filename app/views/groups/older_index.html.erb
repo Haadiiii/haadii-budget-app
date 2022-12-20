@@ -12,8 +12,8 @@
 <% if !@groups.empty? %>
   <div id="groups" class="p-2">
   <% @groups.each do |group| %>
-    <div class="main category d-flex border mb-1 p-1">
-      <div class="logo me-2 col-3" style="background-image: url(<%= group.icon %>)"></div>
+   <div class=" main category d-flex border mb-1 p-5">
+    <div class="logo me-3 col-2" style="background-image: url(<%= group.icon %>); background-repeat: no-repeat; background-size: cover"></div>
       <div class="col-5">
         <%= link_to group_path(group), class: 'text-decoration-none' do %>
           <%= group.name %>

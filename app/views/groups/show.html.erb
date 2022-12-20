@@ -1,32 +1,41 @@
 <div class="d-flex menu justify-content-between top p-2">
-    <%= link_to root_path, class: 'text-light h1' do %>
-        <i class="bi bi-arrow-left-circle-fill"></i>
-    <% end %>
-    <h2 class='text-light h1'>DETAILS</h2>
-    <p></p>
-</div>
-
-<% if @group_expenses.size > 0%>
-<div id="groups" class="p-2">
-  <p class="d-flex justify-content-between">
-    <span>Total payment:</span><span class='font-weight-bold'>$<%= @total %></span>
-  </p>
-  <% @group_expenses.each do |group| %>
-    <div class="main d-flex justify-content-between align-items border bg-light mt-2 mb-2 p-1">
-      <div class="d-flex flex-column">
-        <p>  
-         <%= group.expense.name %>
-        </p>
-        <small class='text-secondary'>
-          <%= group.created_at.strftime("%d %h %Y")%> at <%=group.created_at.strftime("%l.%M%P")%>
-        </small>
-      </div>
-      <p class='font-weight-bold font-italic'>$<%= group.expense.amount %></p>
-    </div>
+  <%= link_to root_path, class: 'text-light h1' do %>
+    <i class="bi bi-arrow-left-circle-fill"></i>
   <% end %>
- <% else %>
+  <h2 class='text-light h1'>DETAILS</h2>
+  <p></p>
+</div>
+ 
+<div>
+  <div class=" main category d-flex border mb-1 p-5">
+    <div class="logo me-2 col-2" style="background-image: url(<%= @group.icon %>); background-repeat: no-repeat; background-size: cover"></div>
+    <div class="col-5">
+       <strong> <%= @group.name %> </strong>
+      <p><%= @group.created_at.strftime("%d %h %Y") %> </p>
+  </div>
+  <p></p>
+  <% @total = 0 %>
+  <% @group.group_expenses.each { |e| @total += e.expense.amount }%>
+  <p class="text-end col-3">Total: $<%= @total %></p>
+</div>
+<% if @group_expenses.size > 0%>
+  <div id="groups" class="p-2">
+    <% @group_expenses.each do |gr| %>
+      <div class="main d-flex justify-content-between align-items border bg-light mt-2 mb-2 p-1">
+        <div class="d-flex flex-column">
+          <p>
+            <%= gr.expense.name %>
+          </p>
+          <small class='text-secondary'>
+            <%= gr.created_at.strftime("%d %h %Y")%> at <%=gr.created_at.strftime("%l.%M%P")%>
+          </small>
+        </div>
+        <p class='font-weight-bold font-italic'>$<%= gr.expense.amount %></p>
+      </div>
+    <% end %>
+  <% else %>
     <p class="p-2">No expense added yet for this category</p>
- <% end %>
+  <% end %>
   <div class="text-light footer d-flex justify-content-center p-3">
     <%= link_to "Add new expense", new_groups_expense_path, class: 'btn border border-dark p-2' %>
   </div>
