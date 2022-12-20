@@ -1,0 +1,2 @@
+module GroupsExpensesHelper
+end

@@ -1,0 +1,15 @@
+<%= form_with(model: @group, class: 'd-flex flex-column') do |form| %>
+  <div class="d-flex menu justify-content-between top p-2">
+    <%= link_to root_path, class: 'text-light h1' do %>
+      <i class="bi bi-arrow-left"></i>
+    <% end %>
+    <h2 class='text-light h1'>NEW CATEGORY</h2>
+  </div>
+  <div class="p-2">
+    <%= form.text_field :name, placeholder: 'Name', class: 'form-control mb-2' %>
+  </div>
+  <div class="p-2">
+    <%= form.text_field :icon, placeholder: 'Icon\'s link', class: 'form-control mb-2' %>
+  </div>
+  <%= form.submit 'Save', data: {turbo: false}, class: "btn btn-primary" %>
+<% end %>

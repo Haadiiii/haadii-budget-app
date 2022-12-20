@@ -1,0 +1,18 @@
+example_id                                   | status | run_time        |
+-------------------------------------------- | ------ | --------------- |
+./spec/models/expense_spec.rb[1:1:1]         | passed | 0.02027 seconds |
+./spec/models/expense_spec.rb[1:1:2]         | passed | 0.02027 seconds |
+./spec/models/expense_spec.rb[1:1:3]         | passed | 0.03035 seconds |
+./spec/models/expense_spec.rb[1:1:4]         | passed | 0.01523 seconds |
+./spec/models/expense_spec.rb[1:1:5]         | passed | 0.01487 seconds |
+./spec/models/expense_spec.rb[1:1:6]         | passed | 0.01424 seconds |
+./spec/models/group_spec.rb[1:1:1]           | passed | 0.11841 seconds |
+./spec/models/group_spec.rb[1:1:2]           | passed | 0.01919 seconds |
+./spec/models/group_spec.rb[1:1:3]           | passed | 0.02848 seconds |
+./spec/models/group_spec.rb[1:1:4]           | passed | 0.03001 seconds |
+./spec/models/group_spec.rb[1:1:5]           | passed | 0.0198 seconds  |
+./spec/models/group_spec.rb[1:1:6]           | passed | 0.01801 seconds |
+./spec/models/groups_expenses_spec.rb[1:1:1] | passed | 0.03176 seconds |
+./spec/models/groups_expenses_spec.rb[1:1:2] | passed | 0.03165 seconds |
+./spec/models/groups_expenses_spec.rb[1:1:3] | passed | 0.05508 seconds |
+./spec/models/groups_expenses_spec.rb[1:1:4] | passed | 0.02609 seconds |

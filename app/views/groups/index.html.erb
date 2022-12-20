@@ -1,0 +1,35 @@
+<div class=" menu d-flex justify-content-between top p-2">
+  <p><i class="bi bi-person-circle"></i>Welcome <%=@name%></p>
+  <h1 class="align-items-center">CATEGORIES</h1>
+  <a href="#" class="text-light"><i class="bi bi-search h1"></i></a>
+</div>
+<ul class=" menu top d-flex justify-content-center gap-2 pb-2 text-light list-unstyled text-decoration-none">
+  <li><%= link_to "Most recent", root_path , :class => 'nav-link' %>
+    <li>
+      <li><%= link_to "Most ancient",  older_groups_path, :class => 'nav-link' %>
+        <li>
+        </ul>
+        <% if !@groups.empty? %>
+          <div id="groups" class="p-2">
+            <% @groups.each do |group| %>
+              <div class=" main category d-flex border mb-1 p-5">
+                <div class="logo me-3 col-2" style="background-image: url(<%= group.icon %>); background-repeat: no-repeat; background-size: cover"></div>
+                <div class="col-5">
+                  <%= link_to group_path(group), class: 'text-decoration-none' do %>
+                    <%= group.name %>
+                  <% end %>
+                  <p><%= group.created_at.strftime("%d %h %Y")  %></p>
+                </div>
+                <p></p>
+                <% @total = 0 %>
+                <% group.group_expenses.each { |e| @total += e.expense.amount }%>
+                <p class="text-end col-3">Total: $<%= @total %></p>
+              </div>
+            <% end %>
+          </div>
+        <% else %>
+          <p class="p-2">No category added yet</p>
+        <% end %>
+        <div class="text-light footer d-flex justify-content-center p-3">
+          <%= link_to "Add new category", new_group_path, class: 'btn border border-dark p-2' %>
+        </div>
