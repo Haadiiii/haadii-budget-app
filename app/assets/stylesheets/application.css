@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.menu {
+  background-color: #3778c2;
+  color: white;
+  border: 1px solid #3778c2;
+}
+
+.main {
+  color: #434b54;
+}
